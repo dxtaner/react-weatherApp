@@ -31,7 +31,7 @@ function App() {
     <div>
       <h2> Hava Durumu</h2>
       <hr />
-      <havaDurumu weather={weather}></havaDurumu>
+      <havaDurumu weather={weather}></havaDurumu>    
     </div>
   );
 }
