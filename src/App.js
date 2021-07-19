@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { usePosition } from "use-position";
+import HavaDurumu from "./component/havadurumu";
 
 function App() {
   const [weather, setWeather] = useState();
@@ -15,7 +16,7 @@ function App() {
    
     try {
       const { data } = await axios.get(
-        'htpss://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}'
+        `htpss://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&lang=${lang}&units=metric`
       );
       setWeather(data);
     } catch {
@@ -31,7 +32,7 @@ function App() {
     <div>
       <h2> Hava Durumu</h2>
       <hr />
-      <havaDurumu weather={weather}></havaDurumu>    
+      <HavaDurumu weather={weather}></HavaDurumu>    
     </div>
   );
 }

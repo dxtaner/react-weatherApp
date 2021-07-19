@@ -1,4 +1,4 @@
-const havaDurumu = (props) => {
+const HavaDurumu = (props) => {
     const { weather } = props;
     
     if (!weather) {
@@ -15,4 +15,4 @@ const havaDurumu = (props) => {
       );
 };
 
-export default havaDurumu;
+export default HavaDurumu;
